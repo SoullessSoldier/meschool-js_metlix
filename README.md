@@ -27,3 +27,12 @@ normalize.css\
     "output.reverseAttributes": true
   },
 ```
+
+## Day 2
+Стили
+
+Дефолтный стиль Макса https://codepen.io/Quper/pen/GRRZzWy
+
+Типографика Лебедева https://www.artlebedev.ru/typograf/
+
+
