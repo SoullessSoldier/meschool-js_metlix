@@ -20,11 +20,9 @@ const createTrailersList = (parentElement, srcList) => {
 
     const iframe = document.createElement("iframe");
     iframe.classList.add("trailers__video");
-    iframe.dataset.src = elem + "&autoplay=1&mute=1";
     iframe.setAttribute("allow", "autoplay");
     div.append(iframe);
     trailerFrames.push(iframe);
-    console.log(elem);
     const idVideo = elem.match(/\/embed\/([^/]+)/)[1];
     const idImgVideo = elem.match(/\/embed\/([^/\?]+)/)[1];
     iframe.srcdoc = `
@@ -87,10 +85,10 @@ const createTrailersList = (parentElement, srcList) => {
 const controlTrailers = (trailerWrappers, trailerFrames, i = 0, j = 0) => {
   if (i !== j) {
     trailerWrappers[i].style.display = "none";
-    trailerFrames[i].src = "";
+    trailerFrames[i].srcdoc = "";
   } else {
     trailerWrappers[i].style.display = "block";
-    trailerFrames[i].src = trailerFrames[i].dataset.src;
+    trailerFrames[i].srcdoc = trailerFrames[i].dataset.srcdoc;
   }
 };
 
@@ -109,6 +107,7 @@ const init = () => {
   );
 
   trailersButtons.forEach((element, elemIndex) => {
+    trailerFrames[elemIndex].dataset.srcdoc = trailerFrames[elemIndex].srcdoc;
     element.addEventListener("click", (e) => {
       trailersButtons.forEach((tBtn, tBtnIndex) => {
         if (tBtn === element) {
