@@ -42,3 +42,14 @@ normalize.css\
 
 Оптимизация изображений https://squoosh.app/
 
+
+## Day 4
+Javascript - табы и видео, встраивание видео с Ютуба через iframe
+
+Получение картинок-коверов с Ютуба:
+```
+https://img.youtube.com/vi/{idVideo}/maxresdefault.jpg
+```
+
+Фейковый API - https://jsonplaceholder.typicode.com/posts
+

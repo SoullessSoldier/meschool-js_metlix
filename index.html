@@ -6,8 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="img/icon.png" />
     <link rel="shortcut icon" type="image/svg+xml" href="img/icon.svg" />
+    <link
+      rel="preload"
+      href="fonts/inter-v13-cyrillic_latin-600.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/inter-v13-cyrillic_latin-regular.woff2"
+      as="font"
+      crossorigin
+    />
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
+    <script src="scripts/main.js" defer></script>
     <title>ПРО КИНО - Аватар: Легенда об Аанге</title>
   </head>
   <body>
@@ -81,27 +94,31 @@
         <div class="container trailers__container">
           <ul class="trailers__buttons">
             <li class="trailers__item-button">
-              <button class="trailers__button trailers__button_active">
+              <button
+                class="trailers__button trailers__button_active"
+                aria-label="Первый трейлер"
+                data-src="https://www.youtube.com/embed/ByAn8DF8Ykk?si=RLahPzvBnCpwTciV"
+              >
                 Трейлер 1
               </button>
             </li>
             <li class="trailers__item-button">
-              <button class="trailers__button">Трейлер 2</button>
+              <button
+                class="trailers__button"
+                aria-label="Второй трейлер"
+                data-src="https://www.youtube.com/embed/waJKJW_XU90?si=v8ICsJ32I7cVgpgC"
+              >
+                Трейлер 2
+              </button>
             </li>
             <li class="trailers__item-button">
-              <button class="trailers__button">Трейлер 3</button>
-            </li>
-          </ul>
-          <ul class="trailers__list">
-            <li class="trailers-item">
-              <div class="trailers__wrapper">
-                <iframe
-                  class="trailers__video"
-                  src="https://www.youtube.com/embed/ByAn8DF8Ykk"
-                  title="Avatar: The Last Airbender | Official Trailer | Netflix"
-                  frameborder="0"
-                ></iframe>
-              </div>
+              <button
+                class="trailers__button"
+                aria-label="Третий трейлер"
+                data-src="https://www.youtube.com/embed/Cw12Dat8bkE?si=wEcKZRg0btbkz74Z"
+              >
+                Трейлер 3
+              </button>
             </li>
           </ul>
         </div>
